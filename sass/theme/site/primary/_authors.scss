@@ -1,0 +1,49 @@
+#author-wrapper {
+    ul {
+        margin: 0 0 20px;
+        padding: 0;
+        list-style: none;
+        ul {
+            margin: 6px 0 -7px;
+            padding: 0 0 0 15px;
+            border-top: 1px solid $gray-lightest;
+        }
+    }
+    li {
+        padding: 6px 0;
+        border-bottom: 1px solid $gray-lightest;
+        a {
+            color: #333;
+            //font-family: Yanone Kaffeesatz,Arial,Helvetica,sans-serif;
+            font-size: 1.2rem;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+.author_bio_section {
+    background: none repeat scroll 0 0 #F5F5F5;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.author_name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.author_details {
+  img {
+    border: 1px solid #D8D8D8;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px 10px 0;
+  }   
+}
+p.author_links  {
+  a {
+    text-align: right;
+  }
+}

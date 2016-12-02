@@ -1,0 +1,11 @@
+.navbar-nav {
+	line-height: 1;
+	.nav-link {
+		font-size: 1.125rem;
+		font-weight: normal;
+		padding: 1.25rem 0.9375rem;
+		}
+	a:hover {
+		background-color: $brand-secondary;
+	}
+}

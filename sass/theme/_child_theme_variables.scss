@@ -6,10 +6,56 @@
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
 
-$brand-primary:         #fece00; //#ff6d5a
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
 
-// Basics of a navbar
-$navbar-height:                    60px;
-$navbar-margin-bottom:             0px;
-$navbar-border-radius:             0px;
+
+$linkColor: #2A6EBB;
+$linkColorHover: darken($linkColor, 15%);
+
+// Accent colors
+// -------------------------
+$green:                 #00B2A9;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+$logo-blue:             #52c9f5;
+
+// BMJ Blues
+// -------------------------
+$bmjBlue:               $linkColor;
+
+$gray-dark:                 #333 !default;
+$gray:                      #555 !default;
+$gray-light:                #999 !default;
+$gray-lighter:              #eee !default;
+$gray-lightest:             #f1f1f1 !default;
+
+$brand-primary:             #2a6ebb !default;
+$brand-secondary:             #4387d5 !default;
+$brand-tertiary:             #B4CFEE !default;
+
+// Navigation Bar
+// -------------------------
+
+$navbar-dark-color:                 #fff!default; //dark bg color (bmjBlue
+$navbar-dark-hover-color:           #fff!default;
+//$navbar-dark-active-color:          
+//$navbar-dark-disabled-color:        
+//$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
+//$navbar-dark-toggler-border:        rgba(255,255,255,.1) !default;
+
+
+// Mobile Navbar
+$navbarMobileLtBlue: #eaf1f8;
+$navbarMobileDkBlue: #005d9a;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "interfaceregular","Helvetica Neue", Arial, sans-serif !default;
 

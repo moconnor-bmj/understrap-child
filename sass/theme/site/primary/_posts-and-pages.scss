@@ -1,0 +1,288 @@
+/* BMJ Blogs custom styles 
+--------------------------
+Content
+----------------------------------------------- */
+
+.site-content li {
+    margin: 0 0 .75em;
+}
+
+.site-content {
+    ul {
+        ul,
+        ol {
+            margin-top: .75em;
+        }
+    }
+    ol {
+        ol,
+        ul {
+            margin-top: .75em;
+        }
+    }
+}
+
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 20px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.entry-header {
+    margin: 0 0 20px;
+}
+
+.category-featured {
+    img.attachment-large{
+        width: 715px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.entry-title {
+    margin: 0 0 3px 0;
+    font-size: 2em;
+    line-height: 1.2;
+    color: #222;
+    font-weight: 700;
+    a {
+        color: #222;
+        text-decoration: none;
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+.entry-meta {
+    color: $gray-light;
+    font-size: 1rem;
+    font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
+    a {
+        color: $brand-primary;
+        text-decoration: none;
+        border: none;
+        &:hover {
+            color: #222;
+        }
+    }
+    .cat-links {
+        margin: 0 20px 0 0;
+    }
+    [class^="ico-"]:before {
+        margin-right: 5px;
+        color: #333;
+    }
+    time.updated,
+    span.byline {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f101 ";
+            color: $brand-primary;
+            margin: 0 5px;
+        }
+    }
+}
+
+.comments-link {
+    float: right;
+    margin: 5px 0 0;
+    a {
+        padding: 4px 10px 6px;
+        display: block;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        line-height: 1;
+        background: $green;
+    }
+}
+
+/*.entry-thumbnail {
+
+} */
+
+.single-thumbnail {
+    margin-bottom: 20px;
+}
+
+.entry-thumbnail img {
+    display: block;
+}
+
+.entry-content {
+    margin: 0 0 20px;
+    a {
+        border-bottom: 1px solid $brand-primary;
+        &:hover {
+            border-bottom: 2px solid;
+            text-decoration: none;
+        }
+    }
+    img {
+        border: 1px solid $gray-lightest;
+        margin: 0 20px 0 0;
+        padding: 4px;
+    }
+}
+
+.entry-summary {
+    margin: 0 0 20px 260px;
+}
+
+.entry-footer {
+    clear: both;
+    padding: 8px 0;
+    border-bottom: 1px solid $gray-lightest;
+    font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
+    .cat-links {
+        color: $gray-light;
+        font-size: 1rem;
+        &:before {
+            font-family: FontAwesome;
+            content: "\f07c ";
+            color: $green;
+            margin: 0 5px;
+        }
+    }
+    .tags-links {
+        color: $gray-light;
+        font-size: 1rem;
+        &:before {
+            font-family: FontAwesome;
+            content: "\f02b ";
+            color: $green;
+            margin: 0 5px;
+        }
+    }
+    span {
+        padding-right: 0;
+    }
+}
+
+.more-link,
+.page-links {
+    margin: 15px 0 0;
+    display: block;
+    text-align: center;
+}
+
+.post-password-required label {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.page-header {
+    margin: 0 0 30px;
+    padding: 15px 20px 5px;
+    color: #fff;
+    background: $logo-blue;
+}
+
+.page-title {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Custom Read more 
+----------------------------------------------- */
+
+a.understrap-read-more-link {
+    border: none;
+    color: $brand-primary;
+    float: right;
+    font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
+    &:hover {
+        background: none;
+        border: none;
+    }
+    &:after {
+        font-family: FontAwesome;
+        content: "\f101 ";
+        color: $brand-primary;
+        margin: 0 5px;
+    }
+}
+
+
+/* Post Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+    margin: 0 0 15px;
+    overflow: hidden;
+}
+
+[class*="navigation"] .nav-previous {
+    width: 50%;
+    float: left;
+}
+
+[class*="navigation"] .nav-next {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.site-main [class*="navigation"] a {
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 26px;
+    background: $green;
+}
+
+.nav-previous a {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f100 ";
+        color: #fff;
+        margin: 0 5px;
+    }
+}
+
+.nav-next a {
+    &:after {
+        font-family: FontAwesome;
+        content: "\f101 ";
+        color: #fff;
+        margin: 0 5px;
+    }
+}
+
+.site-main [class*="navigation"] a:hover {
+    background: $brand-primary;
+}
+
+.site-main [class*="navigation"] [class^="ico-"]:before {
+    margin: 0;
+}
+
+
+/* Archives dropdown */
+
+#archives-dropdown-2 {
+    margin-top: 10px;
+}
+
+/* Lead / Featured Posts
+----------------------------------------------- */
+
+.myFeaturedPosts {
+	width: 100%;
+}

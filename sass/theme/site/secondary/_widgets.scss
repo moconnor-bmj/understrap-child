@@ -1,0 +1,47 @@
+.widget {
+    margin: 0 0 30px;
+}
+
+.widget-title {
+    margin: 0;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid $gray-lightest;
+    span {
+        margin: 0 0 -1px;
+        display: inline-block;
+        line-height: 40px;
+        border-bottom: 3px solid $green;
+    }
+}
+
+/* Make sure select elements fit in widgets */
+
+.widget {
+    select {
+        max-width: 100%;
+    }
+    ul {
+        margin: 0 0 20px;
+        padding: 0;
+        list-style: none;
+        ul {
+            margin: 6px 0 -7px;
+            padding: 0 0 0 15px;
+            border-top: 1px solid $gray-lightest;
+        }
+    }
+    li {
+        padding: 6px 0;
+        border-bottom: 1px solid $gray-lightest;
+        a {
+            color: #333;
+            font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}
