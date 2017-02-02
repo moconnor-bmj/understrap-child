@@ -33,33 +33,26 @@ Content
 }
 
 .entry-header {
-    margin: 0 0 20px;
-}
-
-.category-featured {
-    img.attachment-large{
-        width: 715px;
-        height: auto;
-        margin-bottom: 20px;
-    }
+    margin: 0 0 10px;
 }
 
 .entry-title {
     margin: 0 0 3px 0;
-    font-size: 2em;
+    font-size: 1.5rem;
     line-height: 1.2;
-    color: #222;
+    color: $gray-dark;
     font-weight: 700;
     a {
-        color: #222;
+        color: $gray-dark;
         text-decoration: none;
         &:hover {
-            color: $green;
+            color: $brand-primary;
         }
     }
 }
 
-.entry-meta {
+.entry-meta,
+.post-meta-user {
     color: $gray-light;
     font-size: 1rem;
     font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
@@ -68,7 +61,7 @@ Content
         text-decoration: none;
         border: none;
         &:hover {
-            color: #222;
+            color: $gray-dark;
         }
     }
     .cat-links {
@@ -78,32 +71,8 @@ Content
         margin-right: 5px;
         color: #333;
     }
-    time.updated,
-    span.byline {
-        &:before {
-            font-family: FontAwesome;
-            content: "\f101 ";
-            color: $brand-primary;
-            margin: 0 5px;
-        }
-    }
 }
 
-.comments-link {
-    float: right;
-    margin: 5px 0 0;
-    a {
-        padding: 4px 10px 6px;
-        display: block;
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 400;
-        font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        line-height: 1;
-        background: $green;
-    }
-}
 
 /*.entry-thumbnail {
 
@@ -119,7 +88,10 @@ Content
 
 .entry-content {
     margin: 0 0 20px;
-    a {
+    p {
+        // margin-bottom: 0;
+    }
+    p a {
         border-bottom: 1px solid $brand-primary;
         &:hover {
             border-bottom: 2px solid;
@@ -127,9 +99,9 @@ Content
         }
     }
     img {
-        border: 1px solid $gray-lightest;
+        //border: 1px solid $gray-lightest;
         margin: 0 20px 0 0;
-        padding: 4px;
+        // padding: 4px;
     }
 }
 
@@ -137,33 +109,53 @@ Content
     margin: 0 0 20px 260px;
 }
 
-.entry-footer {
+.entry-footer,
+.entry-meta {
+    color: $gray-light;
     clear: both;
-    padding: 8px 0;
-    border-bottom: 1px solid $gray-lightest;
     font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
     .cat-links {
-        color: $gray-light;
         font-size: 1rem;
         &:before {
             font-family: FontAwesome;
             content: "\f07c ";
-            color: $green;
-            margin: 0 5px;
+            margin: 0 5px 0 0;
         }
     }
     .tags-links {
-        color: $gray-light;
         font-size: 1rem;
         &:before {
             font-family: FontAwesome;
             content: "\f02b ";
-            color: $green;
             margin: 0 5px;
+        }
+    }
+    .posted-on {
+        font-size: 1rem;
+        &:before {
+            font-family: FontAwesome;
+            content: "\f073";
+            margin: 0 5px 0 0;
+        }
+    }
+    .comments-link {
+        margin: 5px 5px 0;
+        &:before {
+            font-family: FontAwesome;
+            content: "\f27a";
+            ;
+            margin: 0 5px 0 0;
         }
     }
     span {
         padding-right: 0;
+    }
+}
+
+#featuredPost {
+    .entry-footer,
+    .entry-meta {
+        color: $green;
     }
 }
 
@@ -181,15 +173,16 @@ Content
 
 .page-header {
     margin: 0 0 30px;
-    padding: 15px 20px 5px;
-    color: #fff;
-    background: $logo-blue;
+    padding: 19px 20px 5px;
+    color: $brand-primary;
+    background: #f1f1f1;
+    border-left: 5px solid $brand-primary;
 }
 
 .page-title {
     margin: 0 0 10px;
     font-size: 1.6em;
-    text-transform: uppercase;
+    font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
 }
 
@@ -197,19 +190,22 @@ Content
 /* Custom Read more 
 ----------------------------------------------- */
 
-a.understrap-read-more-link {
+a.btn.btn-secondary.understrap-read-more-link,
+.more-link {
     border: none;
-    color: $brand-primary;
+    background-color: $green;
+    color: #fff;
+    margin-top: 15px;
+    padding-right: 0;
     float: right;
     font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
     &:hover {
-        background: none;
-        border: none;
+        background-color: $logo-blue;
     }
     &:after {
         font-family: FontAwesome;
         content: "\f101 ";
-        color: $brand-primary;
+        color: #fff;
         margin: 0 5px;
     }
 }
@@ -221,17 +217,20 @@ a.understrap-read-more-link {
 .site-main [class*="navigation"] {
     margin: 0 0 15px;
     overflow: hidden;
+    background-color: $brand-primary;
 }
 
-[class*="navigation"] .nav-previous {
-    width: 50%;
-    float: left;
-}
-
-[class*="navigation"] .nav-next {
-    width: 50%;
-    float: right;
-    text-align: right;
+[class*="navigation"] {
+    .nav-previous {
+        width: 50%;
+        float: left;
+        text-align: left;
+    }
+    .nav-next {
+        width: 50%;
+        float: right;
+        text-align: right;
+    }
 }
 
 .site-main [class*="navigation"] a {
@@ -239,34 +238,14 @@ a.understrap-read-more-link {
     padding: 5px 15px;
     color: #fff;
     font-size: 1.3em;
+    background-color: $brand-primary;
     font-weight: 400;
     font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
     text-decoration: none;
     line-height: 26px;
-    background: $green;
-}
-
-.nav-previous a {
-    &:before {
-        font-family: FontAwesome;
-        content: "\f100 ";
-        color: #fff;
-        margin: 0 5px;
+    &:hover {
+        background: $green;
     }
-}
-
-.nav-next a {
-    &:after {
-        font-family: FontAwesome;
-        content: "\f101 ";
-        color: #fff;
-        margin: 0 5px;
-    }
-}
-
-.site-main [class*="navigation"] a:hover {
-    background: $brand-primary;
 }
 
 .site-main [class*="navigation"] [class^="ico-"]:before {
@@ -274,15 +253,126 @@ a.understrap-read-more-link {
 }
 
 
-/* Archives dropdown */
+/* Custom addition of category rss feed */
 
-#archives-dropdown-2 {
-    margin-top: 10px;
+.category-feed {
+    float: right;
+    margin-top: -40px;
+    a img:hover {
+        opacity: 1;
+    }
+    a img {
+        opacity: .75;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
 }
 
-/* Lead / Featured Posts
------------------------------------------------ */
+// Underline for articles in blog & archive pages
+.blog,
+.archive {
+    article {
+        border-bottom: 1px solid $gray-lightest;
+    }
+}
 
-.myFeaturedPosts {
-	width: 100%;
+
+/* Custom Categroy Titles*/
+
+h1.page-title {
+    &:before {
+        display: block;
+        float: left;
+        padding-right: 10px;
+        font-family: Fontawesome;
+        font-size: 1.5rem;
+        content: "\f07c";
+        color: $brand-primary;
+    }
+}
+
+// Topics Page Styles
+//heading
+h3.topicsCat {
+    color: $logo-blue;
+}
+
+
+/* ===== 
+
+Multi-column-tag-map (topic index layout // styles)
+
+===== */
+
+
+/* =====  version 13.0.5 ===== */
+
+#mcTagMap {
+    .holdinner {
+        clear: both;
+    }
+    .tagDescription {
+        display: block;
+        font-size: 90%;
+        line-height: 1;
+        font-style: italic;
+    }
+    #mcTagMapNav {
+        display: block;
+        background: #eeeeee;
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        border: 1px solid #888888;
+        a {
+            text-decoration: none;
+            padding: 3px 2px 3px 6px;
+            border-left: 1px solid #888888;
+        }
+        a:first-child {
+            border-left: none;
+        }
+    }
+    .tagindex,
+    #sc_mcTagMap .tagindex {
+        padding: 6px 0 10px 0;
+    }
+    .tagindex h4,
+    #sc_mcTagMap .tagindex h4 {
+        color: #52c9f5;
+        border-bottom: 1px solid #f1f1f1;
+        font-family: Yanone Kaffeesatz, Arial, Helvetica, sans-serif;
+        padding: 0 0 4px 0;
+        padding: 0 0 4px 0;
+        margin: 2px 0 4px 0;
+        margin: 2px 0 4px 0;
+    }
+    #mcTagMap .tagindex ul,
+    #sc_mcTagMap .tagindex ul {
+        list-style: none;
+        padding: 1px 0;
+        margin: 0;
+    }
+    .tagindex ul li,
+    #sc_mcTagMap .tagindex ul li {
+        list-style: none;
+        padding: 2px 0;
+        margin: 0;
+    }
+    .holdleft,
+    #sc_mcTagMap .holdleft {
+        display: inline;
+        margin: 0 20px 0 0;
+        text-align: left;
+    }
+    .noMargin,
+    #sc_mcTagMap .noMargin {
+        margin: 0 0 0 0;
+    }
+    .morelink,
+    #sc_mcTagMap .morelink {
+        display: none;
+    }
 }

@@ -33,19 +33,20 @@ $gray:                      #555 !default;
 $gray-light:                #999 !default;
 $gray-lighter:              #eee !default;
 $gray-lightest:             #f1f1f1 !default;
+$alt-gray:                  #f8f8f8 !default;
 
 $brand-primary:             #2a6ebb !default;
-$brand-secondary:             #4387d5 !default;
-$brand-tertiary:             #B4CFEE !default;
+$brand-secondary:           #4387d5 !default;
+$brand-tertiary:            #B4CFEE !default;
 
 // Navigation Bar
 // -------------------------
 
-$navbar-dark-color:                 #fff!default; //dark bg color (bmjBlue
+$navbar-dark-color:                 #fff!default; //dark bg color (bmjBlue)
 $navbar-dark-hover-color:           #fff!default;
 //$navbar-dark-active-color:          
 //$navbar-dark-disabled-color:        
-//$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
+$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
 //$navbar-dark-toggler-border:        rgba(255,255,255,.1) !default;
 
 

@@ -2,140 +2,190 @@
 //
 // Custom navbar navigation built on the base `.nav` styles.
 .navbar {
-	padding: 0;
-}
-
-.navbar-brand {
-    padding: 10px 0 0 0;
+    padding: 0;
+    border-radius: 0;
 }
 
 // Dark links against a light background
 .navbar-light {
-  .navbar-brand,
-  .navbar-toggler {
-    color: $navbar-light-active-color;
-
-    @include hover-focus {
-      color: $navbar-light-active-color;
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: $navbar-light-color;
-
-      @include hover-focus {
-        color: $navbar-light-hover-color;
-      }
-    }
-
-    .open > .nav-link,
-    .active > .nav-link,
-    .nav-link.open,
-    .nav-link.active {
-      @include plain-hover-focus {
+    .navbar-brand,
+    .navbar-toggler {
         color: $navbar-light-active-color;
-      }
+        @include hover-focus {
+            color: $navbar-light-active-color;
+        }
     }
-  }
-
-  .navbar-toggler {
-    background-image: $navbar-light-toggler-bg;
-    border-color: $navbar-light-toggler-border;
-  }
-
-  .navbar-divider {
-    background-color: rgba(0,0,0,.075);
-  }
+    .navbar-nav {
+        .nav-link {
+            color: $navbar-light-color;
+            @include hover-focus {
+                color: $navbar-light-hover-color;
+            }
+        }
+        .open>.nav-link,
+        .active>.nav-link,
+        .nav-link.open,
+        .nav-link.active {
+            @include plain-hover-focus {
+                color: $navbar-light-active-color;
+            }
+        }
+    }
+    .navbar-toggler {
+        background-image: $navbar-light-toggler-bg;
+        border-color: $navbar-light-toggler-border;
+    }
+    .navbar-divider {
+        background-color: rgba(0, 0, 0, .075);
+    }
 }
 
 // White links against a dark background
-.navbar-dark {
-  .navbar-brand,
-  .navbar-toggler {
-    color: $navbar-dark-active-color;
-
-    @include hover-focus {
-      color: $navbar-dark-active-color;
+#main-menu {
+    li.current-menu-item {
+        background-color: $brand-secondary
     }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: $navbar-dark-color;
-
-      @include hover-focus {
-        color: $navbar-dark-hover-color;
-      }
-    }
-
-    .open > .nav-link,
-    .active > .nav-link,
-    .nav-link.open,
-    .nav-link.active {
-      @include plain-hover-focus {
-        color: $navbar-dark-active-color;
-      }
-    }
-  }
-
-  .navbar-toggler {
-    background-image: $navbar-dark-toggler-bg;
-    border-color: $navbar-dark-toggler-border;
-  }
-
-  .navbar-divider {
-    background-color: rgba(255,255,255,.075);
-  }
 }
 
+.navbar-dark {
+    .dropdown-menu {
+        background-color: $brand-primary;
+        &:hover {
+            background-color: $brand-secondary;
+        }
+    }
+    .navbar-brand,
+    .navbar-toggler {
+        color: $navbar-dark-active-color;
+        @include hover-focus {
+            color: $navbar-dark-active-color;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $navbar-dark-color;
+            @include hover-focus {
+                color: $navbar-dark-hover-color;
+            }
+        }
+        .open>.nav-link,
+        .active>.nav-link,
+        .nav-link.open,
+        .nav-link.active {
+            @include plain-hover-focus {
+                color: $navbar-dark-active-color;
+            }
+        }
+    }
+    .navbar-toggler {
+        background-image: $navbar-dark-toggler-bg;
+        border: none;
+    }
+    .navbar-divider {
+        background-color: rgba(255, 255, 255, .075);
+    }
+}
 
 // Navbar toggleable
 //
 // Custom override for collapse plugin in navbar.
-
 .navbar-toggleable {
-  &-xs {
-    @include clearfix;
-    @include media-breakpoint-down(xs) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
+    &-xs {
+        @include clearfix;
+        @include media-breakpoint-down(xs) {
+            .navbar-nav .nav-item {
+                float: none;
+                margin-left: 0;
+            }
+        }
+        @include media-breakpoint-up(sm) {
+            display: block !important;
+        }
     }
-    @include media-breakpoint-up(sm) {
-      display: block !important;
+    &-sm {
+        @include clearfix;
+        @include media-breakpoint-down(sm) {
+            .navbar-nav .nav-item {
+                float: none;
+                margin-left: 0;
+            }
+        }
+        @include media-breakpoint-up(md) {
+            display: block !important;
+        }
     }
-  }
-
-  &-sm {
-    @include clearfix;
-    @include media-breakpoint-down(sm) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
+    &-md {
+        @include clearfix;
+        @include media-breakpoint-down(md) {
+            .navbar-nav .nav-item {
+                float: none;
+                margin-left: 0;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            display: block !important;
+        }
     }
-    @include media-breakpoint-up(md) {
-      display: block !important;
-    }
-  }
-
-  &-md {
-    @include clearfix;
-    @include media-breakpoint-down(md) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      display: block !important;
-    }
-  }
 }
 
 .navbar-dark .navbar-toggler {
     float: left;
-    margin: 10px 10px 0 0;
+    margin: 10px 10px 10px 0;
+}
+
+.navbar #main-menu {
+    margin-left: 5.5rem;
+}
+
+
+/* Retina Logo Support - see functions.php - moconnor-bmj */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min--moz-device-pixel-ratio: 2),
+only screen and ( -o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) {
+    .navbar-brand.custom-logo-link {
+        float: left;
+        min-height: 130px;
+        width: 100%;
+        //background: url(images/thebmj-logo@2x.png) no-repeat left top !important;
+        background-size: 130px 65px !important;
+    }
+}
+
+.navbar-brand.custom-logo-link {
+    max-width: 230px;
+    min-height: 38px;
+    padding: 10px 0 0 0px;
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+//MEDIA QUERIES for menu
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+    .navbar-brand.custom-logo-link {
+        padding: 11px 0 0 0;
+    }
+    .navbar #main-menu {
+        margin-left: 5rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar #main-menu {
+        margin-left: 1.5rem;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .navbar #main-menu {
+        margin-left: 5rem;
+    }
 }

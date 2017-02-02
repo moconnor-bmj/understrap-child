@@ -35,7 +35,7 @@
       <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
 	
 	<!-- ******************* LEADERBOARD - remove to include file !!! ******************* -->
-	<div class="ad-leaderboard hidden-sm-down" style="display: block; background-color: #ddd; text-align: center; padding: 1.52rem 0;">
+	<div class="ad-leaderboard hidden-sm-down" style="display: block; background-color: #f1f1f1; text-align: center; padding: 1.52rem 0;">
          <img src="http://placehold.it/728x90/52c9f5/ffffff?text=Leaderboard"></div>
     </div>
     <!-- ******************* END LEADERBOARD - remove to include file !!! ******************* -->
@@ -48,7 +48,7 @@
           <div class="navbar-header">
 
             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
 
             <!-- Your site title as branding in the menu -->
             <?php if (!has_custom_logo()) { ?>
@@ -63,16 +63,32 @@
           <?php wp_nav_menu(
             array(
               'theme_location' => 'primary',
-              'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
+              'container_class' => 'collapse navbar-toggleable-sm exCollapsingNavbar',
               'menu_class' => 'nav navbar-nav',
               'fallback_cb' => '',
               'menu_id' => 'main-menu',
               'walker' => new wp_bootstrap_navwalker()
             )
-          ); ?>
-
+          ); ?> 
         </div> <!-- .container -->
 
       </nav><!-- .site-navigation -->
+     </div><!-- .wrapper-navbar end -->
 
-    </div><!-- .wrapper-navbar end -->
+    
+    <!---  Custom PHP for The BMJ site link -->
+
+
+<div id="content" class="container-fluid hidden-md-up bmjMob">		
+  <div class="bmj_text">
+    <p>
+        <a href="//bmj.com/thebmj">Access thebmj.com - <img alt="The BMJ logo" title="The BMJ" src="/wp-content/uploads/2016/12/thebmj_logo.png"></a> 
+    </p> 
+  </div>
+</div>
+
+
+    
+    
+
+   
