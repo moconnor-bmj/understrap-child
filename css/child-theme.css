@@ -7841,7 +7841,7 @@ h3.topicsCat,
 h3.columnistCat,
 h3.guestCat {
   border-bottom: 1px solid #f1f1f1;
-  font-family: Yanone Kaffeesatz,Arial,Helvetica,sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 0 0 20px 7px; }
 
 h3.featuredCat a {
@@ -7903,7 +7903,7 @@ h3.guestCat a {
     border: none;
     padding: 0 0 5px 15px; }
 
-.single .site-main p:first-of-type {
+.single .site-main p.standfirst {
   font-style: italic; }
 
 #columnistsCategory img.wp-post-image {
@@ -8178,6 +8178,10 @@ h1.page-title:before {
 
 h3.topicsCat {
   color: #52c9f5; }
+
+.blog .tags-links,
+.archive .tags-links {
+  display: none; }
 
 /* ===== 
 
@@ -8605,9 +8609,11 @@ p.author_links a {
 
 .shortcode_iframe {
   border: 1px solid #f1f1f1;
-  height: 570px; }
+  height: 836px; }
 
-ul.children, li.cat-item.cat-item-14781 {
+ul.children,
+li.cat-item.cat-item-3128,
+li.cat-item.cat-item-1 {
   display: none; }
 
 /*--------------------------------------------------------------

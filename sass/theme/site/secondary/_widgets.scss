@@ -212,16 +212,18 @@
     }
 }
 
-// Careers iFrame Weidget - add border 
+// Careers iFrame Widget - add border 
 
 .shortcode_iframe {
     border: 1px solid #f1f1f1;
-    height: 570px;
+    height: 836px;
 }
 
 // Requirement to hide sub categories in sidebar
 // & editableCategory too
 
-ul.children, li.cat-item.cat-item-14781 {
+ul.children, 
+li.cat-item.cat-item-3128,
+li.cat-item.cat-item-1 {
     display:none;
 }

@@ -37,7 +37,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
               <?php if ( is_category() ) {
               $category = get_category( get_query_var('cat') );
               if ( ! empty( $category ) )
-              echo '<div class="category-feed"><a href="' . get_category_feed_link( $category->cat_ID ) . '" title="' . sprintf( __( 'Subscribe to this category', 'understrap' ), $category->name ) . '" rel="nofollow">' . __( '<img src="/wp-content/uploads/2017/01/rss-128.png" width="32">', 'understrap' ) . '</a></div>';
+              echo '<div class="category-feed"><a href="' . get_category_feed_link( $category->cat_ID ) . '" title="' . sprintf( __( 'Subscribe to this category', 'understrap' ), $category->name ) . '" rel="nofollow">' . __( '<img src="/bmj/files/2017/02/rss-128.png" width="32">', 'understrap' ) . '</a></div>';
               }
               ?>
 					</header><!-- .page-header -->

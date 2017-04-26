@@ -1,5 +1,8 @@
 // Fonts
 // --------------------------
+
+// Interface - BMJ Font
+// --------------------------
 @font-face {
 	font-family: 'interfaceregular';
 	src: url('../fonts/if_std_rg-webfont.eot');
@@ -53,4 +56,34 @@
 		font-weight: normal;
 		font-style: italic;
 	}
+}
+
+// Interface - BMJ Font
+// --------------------------
+@font-face {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	src: url('../fonts/YanoneKaffeesatz-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	src: url('../fonts/YanoneKaffeesatz-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	src: url('../fonts/YanoneKaffeesatz-ExtraLight.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	src: url('../fonts/YanoneKaffeesatz-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
 }

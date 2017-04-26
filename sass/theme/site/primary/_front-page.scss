@@ -39,7 +39,7 @@ h3.topicsCat,
 h3.columnistCat,
 h3.guestCat {
     border-bottom: 1px solid $gray-lightest;
-    font-family: Yanone Kaffeesatz,Arial,Helvetica,sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     margin: 0 0 20px 7px;
 }
 
@@ -133,7 +133,7 @@ h3.guestCat a {
 
 // STANDFIRST on single post page
 .single .site-main {
-    p:first-of-type {
+    p.standfirst {
         font-style: italic;
     }
 }
