@@ -48,11 +48,12 @@ if ( class_exists( 'WooCommerce' ) ) {
 				$catName = $obj->slug;
 				$args = array(
 				'posts_per_page'   => 1,
-				'tag_id'           => 14779,  
+				'tag'              => 'featured',  
 				'orderby'          => 'modified',
 				'order'            => 'DESC',
 				'post_type'        => 'post',
-				'post_status'      => 'publish'
+				'post_status'      => 'publish',
+        'post__not_in'     => $do_not_duplicate
 				);
 				$posts_array = new WP_Query( $args );
 				if ($posts_array->have_posts()) : while ($posts_array->have_posts()) : $posts_array->the_post();
@@ -93,13 +94,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 
                 <div id="featuredCategory" class="row">
-                    <h3 class="featuredCat"><a href="<?php echo get_category_link(14778); ?>"><span>
-                  <?php echo get_cat_name(14778); ?></span></a></h3>
+                    <h3 class="featuredCat"><a href="<?php echo get_category_link(3128); ?>"><span>
+                  <?php echo get_cat_name(3128); ?></span></a></h3>
                     <?php 
                     $args = array(
                     'posts_per_page'   => 6,
                     'category_name'	   => 'featured',
-                    'category__not_in' => array( 14781,14780 ), //not in editable topics category (id = 14781), columnists (id = 14780), guest writers (id = 223)
+                   // 'category__not_in' => array( 18752,14777 ), //not in editable topics category (id = 18752), columnists (id = 14777), guest writers (id = 223)
                     'orderby'          => 'date',
                     'order'            => 'DESC',
                     'post_type'        => 'post',
@@ -141,10 +142,11 @@ if ( class_exists( 'WooCommerce' ) ) {
                     $args = array(
                     'posts_per_page'   => 9,
                     'orderby'          => 'most_recent',
-                    'category__not_in' => array( 14778), //not in featured (id = 14778)
+                   // 'category__not_in' => array( 3128), //not in featured (id = 3128)
                     'order'            => 'DESC',
                     'post_type'        => 'post',
                     'post_status'      => 'publish',
+                    'tag__not_in'      => array('14783'),
                     'post__not_in'     => $do_not_duplicate
                       );
                     
@@ -176,13 +178,13 @@ if ( class_exists( 'WooCommerce' ) ) {
                 <!-- #latestCategory end -->
 
                 <div id="editableCategory" class="row">
-                    <h3 class="topicsCat"><a href="<?php echo get_category_link(14781); ?>"><span>
-              <?php echo get_cat_name(14781); ?></span></a></h3>
+                    <h3 class="topicsCat"><a href="<?php echo get_category_link(18753); ?>"><span>
+              <?php echo get_cat_name(18753); ?></span></a></h3>
                     <?php 
                     $args = array(
                     'posts_per_page'   => 3,
-                    'cat'	             => 14781,
-                    'category__not_in' => array( 14778,14780,223 ), //not in featured (id = 14778), columnists (id = 14780), guest writers (id = 223)
+                    'cat'	             => 18753,
+                  //  'category__not_in' => array( 14778,14777 ), //not in featured (id = 14778), columnists (id = 14777), guest writers (id = 223)
                     'orderby'          => 'date',
                     'order'            => 'DESC',
                     'post_type'        => 'post',
@@ -218,19 +220,19 @@ if ( class_exists( 'WooCommerce' ) ) {
                 <!-- #editableCategory end -->
                 
                 <div id="columnistsCategory" class="row">
-                  <h3 class="columnistCat"><a href="<?php echo get_category_link(14780); ?>"><span>
-                  <?php echo get_cat_name(14780); ?></span></a></h3>
+                  <h3 class="columnistCat"><a href="<?php echo get_category_link(14777); ?>"><span>
+                  <?php echo get_cat_name(14777); ?></span></a></h3>
                     <?php 
                     $args = array(
                     'posts_per_page'   => 3,
-                    'cat'	             => 14780,
-                    'category__not_in' => array( 14778,14781,223 ), //not in featured (id = 14778), editable category (id = 14781), guest writers (id = 3)
-                    'tag_id'           => 14783,
+                    //'cat'	             => 14777,
+                 //   'category__not_in' => array( 14778,18753,223 ), //not in featured (id = 14778), editable category (id = 18753), guest writers (id = 3)
+                    'tag_id'           => 14784,
                     'orderby'          => 'date',
                     'order'            => 'DESC',
                     'post_type'        => 'post',
                     'post_status'      => 'publish',
-                    'post__not_in' => $do_not_duplicate
+                    //'post__not_in' => $do_not_duplicate
                       );
                     
                     $posts_array = new WP_Query( $args );
@@ -281,7 +283,7 @@ if ( class_exists( 'WooCommerce' ) ) {
             $args = array(
             'posts_per_page'   => 4,
             'cat'	             => 223,
-            //'category__not_in' => array( 14778,14781,14780 ), //not in featured (id = 14778), editable category (id = 14781), columnists (id = 14780)
+            //'category__not_in' => array( 14778,18753,14777 ), //not in featured (id = 14778), editable category (id = 18753), columnists (id = 14777)
             'orderby'          => 'date',
             'order'            => 'DESC',
             'post_type'        => 'post',
@@ -317,9 +319,11 @@ if ( class_exists( 'WooCommerce' ) ) {
         <!-- Container end -->
     </div>
     <!-- Wrapper end -->
-<script>
-jQuery(function ($) {
-    $('article').matchHeight();
-});
-</script>
+    <!-- SCript for equal height grids
+    <script>
+      jQuery(function ($) {
+          $('article').matchHeight();
+      });
+    </script>
     <?php get_footer(); ?>
+    <span>!</span>
